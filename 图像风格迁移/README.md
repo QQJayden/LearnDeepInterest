@@ -35,8 +35,14 @@ $$
 
 以conv1_1为例，共包含64个特征图，每个特征图都是对上一层输出的一种理解；64个人之间的理解差异可用特征图的互相关表示；不同风格会导致差异化互相关结果
 
+![](https://raw.githubusercontent.com/QQJayden/LearnDeepInterest/master/img/20190309193942.png)
+
 ![1552052416636](/home/jayden/.config/Typora/typora-user-images/1552052416636.png)
 
 + 总损失
+
+![](https://raw.githubusercontent.com/QQJayden/LearnDeepInterest/master/img/20190309194254.png)
+
+![1552131767816](/home/jayden/.config/Typora/typora-user-images/1552131767816.png)
 
 ![1552052439565](/home/jayden/.config/Typora/typora-user-images/1552052439565.png)
