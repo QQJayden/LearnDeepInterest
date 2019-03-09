@@ -18,7 +18,11 @@
 
 以VGG19为例，介绍内容损失函数
 
-![1552051613602](/home/jayden/.config/Typora/typora-user-images/1552051613602.png)
+![1552123139346](/home/jayden/github/LearnDeepInterest/图像风格迁移/1552123139346.png)
+
+![1552051613602](https://github.com/QQJayden/LearnDeepInterest/raw/master/home/jayden/.config/Typora/typora-user-images/1552051613602.png)
+
+
 $$
 L_{content}(\vec{p},\vec{x},l)=\frac12\sum_{i,j}(F_{ij}^l-P_{ij}^l)^2
 $$
