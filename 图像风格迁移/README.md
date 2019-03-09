@@ -18,6 +18,8 @@
 
 以VGG19为例，介绍内容损失函数
 
+![](https://raw.githubusercontent.com/QQJayden/LearnDeepInterest/master/img/20190309193350.png)
+
 ![1552128890579](/home/jayden/.config/Typora/typora-user-images/1552128890579.png)
 
 
