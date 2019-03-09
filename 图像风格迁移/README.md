@@ -18,9 +18,9 @@
 
 以VGG19为例，介绍内容损失函数
 
-![1552123139346](/home/jayden/github/LearnDeepInterest/图像风格迁移/1552123139346.png)
+![1552128890579](/home/jayden/.config/Typora/typora-user-images/1552128890579.png)
 
-![1552051613602](https://github.com/QQJayden/LearnDeepInterest/raw/master/home/jayden/.config/Typora/typora-user-images/1552051613602.png)
+
 
 
 $$
