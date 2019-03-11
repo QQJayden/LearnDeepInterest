@@ -18,7 +18,7 @@
 
 以VGG19为例，介绍内容损失函数
 
-![](http://po6wpcio1.bkt.clouddn.com/img2/20190311153210.png)
+![](https://i.loli.net/2019/03/11/5c86662612712.png)
 
 
 
@@ -33,8 +33,8 @@ $$
 
 以conv1_1为例，共包含64个特征图，每个特征图都是对上一层输出的一种理解；64个人之间的理解差异可用特征图的互相关表示；不同风格会导致差异化互相关结果
 
-![](http://po6wpcio1.bkt.clouddn.com/img2/20190311153435.png)
+![](https://i.loli.net/2019/03/11/5c86664579d31.png)
 
 + 总损失
 
-![](http://po6wpcio1.bkt.clouddn.com/img2/20190311153521.png)
+![](https://i.loli.net/2019/03/11/5c86667766234.png)
