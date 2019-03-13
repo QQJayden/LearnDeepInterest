@@ -1,68 +1,39 @@
-# 图像风格迁移
+'''Neural style transfer with Keras.
+ Run the script with:
 
----
-
-> 知乎： [04 图像风格迁移](https://zhuanlan.zhihu.com/p/44165451)
-
-## 原理
-
-图像风格迁移是将一幅内容图的内容和一幅或多幅风格图的风格融合在一起，从而生成一些有意思的图片
-
-所生成的风格图内容上应该尽可能接近内容图，风格上尽可能接近风格图
-
-因此需要定义内容损失函数和风格损失函数
-
-## 损失函数
-
-+ 内容损失函数：
-
-以VGG19为例，介绍内容损失函数
-
-![](https://i.loli.net/2019/03/11/5c86662612712.png)
-
-
-
-
-$$
-L_{content}(\vec{p},\vec{x},l)=\frac12\sum_{i,j}(F_{ij}^l-P_{ij}^l)^2
-$$
-
-+ 风格损失函数：
-
-风格难以说清，这里使用卷积层各个特征图之间的互相关作为风格
-
-以conv1_1为例，共包含64个特征图，每个特征图都是对上一层输出的一种理解；64个人之间的理解差异可用特征图的互相关表示；不同风格会导致差异化互相关结果
-
-![](https://i.loli.net/2019/03/11/5c86664579d31.png)
-
-+ 总损失
-
-![](https://i.loli.net/2019/03/11/5c86667766234.png)
-
-## Keras代码
-
-```python
-
-'''
+```
 python neural_style_transfer.py path_to_your_base_image.jpg \
         path_to_your_reference.jpg prefix_for_results
 
-Optional parameters:
+```
+e.g.:
+```
+python neural_style_transfer.py img/tuebingen.jpg \
+        img/starry_night.jpg results/my_result
 
-​```
+```
+Optional parameters:
+```
 --iter, To specify the number of iterations \
         the style transfer takes place (Default is 10)
 --content_weight, The weight given to the content loss (Default is 0.025)
 --style_weight, The weight given to the style loss (Default is 1.0)
 --tv_weight, The weight given to the total variation loss (Default is 1.0)
 
-​```
+```
+
+It is preferable to run this script on GPU, for speed.
+
+Example result: https://twitter.com/fchollet/status/686631033085677568
 
 # Details
-损失函数三个部分：
-"style loss"
-"content loss"
-"total variation loss"：全变差正则
+Style transfer consists in generating an image
+with the same "content" as a base image, but with the
+"style" of a different picture (typically artistic).
+
+This is achieved through the optimization of a loss function
+that has 3 components: "style loss", "content loss",
+and "total variation loss":
 
 - The total variation loss imposes local spatial continuity between
 the pixels of the combination image, giving it visual coherence.
@@ -320,8 +291,3 @@ for i in range(iterations):
     end_time = time.time()
     print('Image saved as', fname)
     print('Iteration %d completed in %ds' % (i, end_time - start_time))
-
-```
-
-
-
